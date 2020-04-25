@@ -12,9 +12,9 @@ class BooksTableSeeder extends Seeder
     public function run()
     {
         //テーブル7のクリア
-        DB::table('book')->truncate();
+        DB::table('books')->truncate();
 
-        //初期データのクリア
+        //初期データ用意（列名をキーとする連想配列)
         $books = [
             ['name'=>'PHP Book',
             'price'=> 2000,
@@ -28,7 +28,7 @@ class BooksTableSeeder extends Seeder
         ];
 
         //登録
-        foreach($book as $book){
+        foreach($books as $book){
             \App\Book::create($book);
         }
     }
