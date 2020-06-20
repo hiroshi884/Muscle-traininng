@@ -15,7 +15,7 @@ class CreateCashFlowsTable extends Migration
     {
         Schema::create('cash_flows', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->integer('price');
+            $table->integer('amount');
             $table->string('title', 100);
             
             $table->timestamps();
