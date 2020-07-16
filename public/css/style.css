@@ -1,0 +1,68 @@
+h1.yuza{
+   font-size: 40px;
+   text-align: center;
+}
+.see{
+    background-color: #0bd;
+    background-size: cover;
+    min-height: 100vh;
+}
+.jyp{
+    background-color:pink;
+}
+.card-body{
+    text-align: center;
+    
+}
+.card-text{
+    font-size: 25px;
+    color: black;
+}
+
+.head {
+    font-size: 24px;
+     
+    text-align: right!important;
+    padding-right: 100px;
+}
+.head a{
+    color: #fff;
+}
+.head:hover{
+    color: #0bd;
+}
+h1.g{
+    color: #fff;
+    font-size:50px
+}
+p.k{
+    color: #fff !important;
+    font-size: 26px;
+    margin-top:20px;
+    margin-bottom: 60px;
+}
+.button{
+    font-size: 24px;
+    background-color: #0bd;
+    color: #fff;
+    border-radius: 5px;
+    padding: 18px 32px;
+    margin-top: 80px ;
+}
+#home{
+    background-image: url(../images/main-bg.jpg);
+   min-height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.back{
+    background-color: #0bd !important;
+    background-size: cover;
+}
+#man{
+    background-color: #0bd;
+    min-height: 100vh;
+}
+.ram{
+    background-color: red;
+}
