@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -38,7 +39,7 @@ class User extends Authenticatable
     ];
 
     public function protains()
-{
-    return $this->hasMany(Protain::class);
-}
+    {
+        return $this->hasMany(Protain::class);
+    }
 }

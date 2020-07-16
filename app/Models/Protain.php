@@ -11,7 +11,7 @@ class Protain extends Model
 {
     use SoftDeletes;
 
-    protected $fillable = ['name','body', 'things','weights','how_many', 'sets','body']; // ★ ここを追加！
+    protected $fillable = ['name','body', 'things','weights','how_many', 'sets','date','body']; // ★ ここを追加！
 
     public function user()
 {

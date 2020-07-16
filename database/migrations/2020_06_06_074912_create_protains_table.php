@@ -20,8 +20,9 @@ class CreateProtainsTable extends Migration
             $table->string('things', 50)->nullable();
             $table->string('weights', 50)->nullable();
             $table->string('how_many', 50)->nullable();
-            $table->string('sets', 50)->nullable();;
-            $table->string('body');
+            $table->string('sets', 50)->nullable();
+            $table->date('date')->nullable();
+            $table->string('body')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

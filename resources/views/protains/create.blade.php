@@ -1,5 +1,6 @@
+<div id="man" class="sub-sb">
 @extends('layouts.app')
-
+<link rel="stylesheet" href="{{ asset('css/style.css') }}"
 @section('content')
 <div class="container">
   <div class="row justify-content-center">
@@ -22,7 +23,7 @@
     </select>
     </label>
 
-    <label>種目：<input name="things" type="text" value="" /></label>
+    <label>種目：<input name="things"  required type="text" value="" /></label>
 
     <label>重量:
     <select name="weights">
@@ -40,17 +41,19 @@
     </select>
     </label>
 
-   <label>回数：<input name="how_many" type="number" placeholder="（例）5"></label>
-   <label>セット数：<input name="sets" type="number" placeholder="（例）3"></label><br>
-   <div class="row justify-content-center">メモ：<br>
-   <textarea name="body" rows="4" cols="40"placeholder="今日のトレーニングの感想を記入しよう。
+   <label>回数：<input name="how_many" required type="number" placeholder="（例）5"></label>
+   <label>セット数：<input name="sets"required type="number" placeholder="（例）3"></label><br>
+    <label>日付け<input name="date"  required type="date" ></label>
+   <div class="row justify-content-center" >メモ：<br>
+   <textarea name="body" rows="4" cols="40" required placeholder="今日のトレーニングの感想を記入しよう。
    "></textarea><br></div>
 
    <div class="form-group row mb-0">
               <div class="col-md-8 offset-md-4">
-    <button type="submit">投稿する</button>
+    <div class="div"><button type="submit">投稿する</button></dv>
     </div>
     </div>
   </form>
  </div>
 @endsection
+</div><!--/#home -->

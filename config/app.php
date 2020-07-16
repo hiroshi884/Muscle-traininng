@@ -67,7 +67,7 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
+    'timezone' => 'Asia/Tokyo',
 
     /*
     |--------------------------------------------------------------------------
@@ -227,5 +227,5 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
 
     ],
-
+    
 ];

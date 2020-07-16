@@ -22,7 +22,8 @@ class ProtainsTableSeeder extends Seeder
                  'weights' =>null,
                  'how_many' => 2,
                  'sets' => 2,
-                 'body'=>'追い込めたぁぁ'
+                 'date' => '2020-06-23',
+                 'body' => '追い込めたぁぁ'
                 ],
                
                  
@@ -32,7 +33,8 @@ class ProtainsTableSeeder extends Seeder
                      'weights' =>null,
                      'how_many' => 3,
                      'sets' => 3,
-                     'body'=>'疲れたぁぁ'
+                     'date' =>'2020-06-23',
+                     'body' => '疲れたぁぁ'
                     ],
                    
                 ];
