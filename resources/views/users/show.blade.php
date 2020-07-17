@@ -1,8 +1,7 @@
 
 @extends('layouts.app')
-
-@section('content')
 <div style="background-color: #0bd">
+@section('content')
   <div class="container">
 
     @foreach($user->protains as $protain)
@@ -26,6 +25,6 @@
    @endforelse
     </div>
   </div>
-</div>
 @endsection
+</div>
 

@@ -58,9 +58,11 @@ p.k{
 .back{
     background-color: #0bd !important;
     background-size: cover;
+    min-height: 100vh;
 }
 #man{
     background-color: #0bd;
+    background-size: cover;
     min-height: 100vh;
 }
 .ram{

@@ -2,6 +2,7 @@
 @extends('layouts.app')
 <link rel="stylesheet" href="{{ asset('css/style.css') }}"
 @section('content')
+
 <div class="container">
   <div class="row justify-content-center">
     <div class="col-lg-8">
