@@ -3,9 +3,9 @@
 
 @section('content')
 <div style=text-align:center;font-size:30px>
-<a href="http://127.0.0.1:8000/calendars/{{$lastMonth}}">&lt;</a>
+<a href="{{route('calendars.show',$lastMonth)}}">&lt;</a>
 <span>{{$month}}</span>
-<a href="http://127.0.0.1:8000/calendars/{{$nextMonth}}">&gt;</a>
+<a href="{{route('calendars.show',$nextMonth)}}">&gt;</a>
 </div>
 <table class="table table-bordered" style="width:unset;margin:auto">
   <colgroup span="7" style="height:50px;" >
