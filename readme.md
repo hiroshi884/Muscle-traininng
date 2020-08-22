@@ -1,31 +1,32 @@
 
 
-#what is mascle-training?
+# what is mascle-training?
 this is managing and sharing fitness.It can record training which  is done every days,and can share your reccrds with yourfriends.
-#why did I make it?
+# why did I make it?
 During stay homing, I do mascle training.But,fitness is difficult to do every days.Bcause it is hard to stay motivated.My friends who  do mascle training also think same things.SO I share records with his.
 Because when we see his record, we think they did harder than me.Then, I will do my best not to lose his. So I think that if we have place which can share my records with friends, we can watch each other to staymotivated.
 
-#demo
-<img src="../demo.gif">
-#Features
-share Page:It can see friend`s records.
-users Page:It can see records which you want to see. 
-Carender Page:It can seeing my records in amonth.
+# demo
+![demo](https://user-images.githubusercontent.com/62578668/90951470-3abe5180-e496-11ea-92c6-a06d766ccb32.gif)
 
-#Requirement
-・laravel
-・PHP
-・HTML CSS
-・My SQL
-・Heroku
+# Features
+* share Page:It can see friend`s records.
+* users Page:It can see records which you want to see. 
+* Carender Page:It can seeing my records in amonth.
 
-#Setup
+# Requirement
+* laravel
+* PHP
+* HTML CSS
+* My SQL
+* Heroku
+
+# Setup
 ・ https://mascle.herokuapp.com/protains
 
-#Usage
+# Usage
 In case you are experimenter
-・Access to 'https://mascle.herokuapp.com/protains'
-・Login as a demo user
-    e-mail: test2@test.com
-    password: password
+* Access to 'https://mascle.herokuapp.com/protains'
+* Login as a demo user
+    * e-mail: test2@test.com
+    * password: password
