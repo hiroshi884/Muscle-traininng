@@ -8,7 +8,7 @@
                 <div class="card-header">{{ __('登録') }}</div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('register') }}">
+                    <form method="POST" action="{{ route('register') }}" enctype="multipart/form-data">
                         @csrf
 
                         <div class="form-group row">
@@ -43,9 +43,14 @@
                             <label for="file" class="col-md-4 col-form-label text-md-right">{{ __('画像') }}</label>
 
                             <div class="col-md-6">
-                                <input id="file" type="file" class="form-control"  name="file"  required autocomplete="file" value="{{ old('file') }}" >
-
+                                <input id="file" type="file" class="custom-file-input @error('file')is-invalid @enderror"  name="file" >
+                                <label class="custom-file-label" for="customFile">ファイルを選択してください</label>
                             </div>
+                            @error('file')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                         </div>
 
                             
