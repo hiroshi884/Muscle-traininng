@@ -43,8 +43,8 @@
                             <label for="file" class="col-md-4 col-form-label text-md-right">{{ __('画像') }}</label>
 
                             <div class="col-md-6">
-                                <input id="file" type="file" class="custom-file-input @error('file')is-invalid @enderror"  name="file" >
-                                <label class="custom-file-label" for="customFile">ファイルを選択してください</label>
+                                <input id="file" type="file" @error('file')is-invalid @enderror"  name="file" >
+                                
                             </div>
                             @error('file')
                                     <span class="invalid-feedback" role="alert">

@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -22,7 +22,18 @@ class HomeController extends Controller
      * @return \Illuminate\Contracts\Support\Renderable
      */
     public function index()
-    {
-        return view('protains.create');
+    {   $user = null;
+        if(
+            isset($data['file'])
+            && $data['file'] instanceof UploadedFile
+        ){
+            $filepath = $data['file']->store('public/uploads');
+            
+            $user= basename($filepath);
+           
+            
+        }
+
+        return view('protains.create',['users' => User::orderBy('id', 'desc')->paginate(),]);
     }
 }

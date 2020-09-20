@@ -36,3 +36,5 @@ Route::middleware('auth')->get('calendars','CalendarController@record')->name('c
 
 
 Route::middleware('auth')->get('firsts/first', 'FirstController@first')->name('first');
+
+Route::get('test', 'TestController@index')->name('test');

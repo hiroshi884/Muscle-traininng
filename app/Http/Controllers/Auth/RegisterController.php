@@ -4,9 +4,12 @@ namespace App\Http\Controllers\Auth;
 
 use App\Models\User;
 use App\Http\Controllers\Controller;
+use App\Providers\PouteServiceProvider;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Http\UploadedFile;
 
 class RegisterController extends Controller
 {
@@ -51,7 +54,7 @@ class RegisterController extends Controller
         return Validator::make($data, [
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'file' => ['nullable','file','max:8192',],
+            'file' => ['nullable','file','max:8192','mimes:jpeg,jpg,png,gif,pdf'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
     }
@@ -64,14 +67,16 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+       
         $user = null;
+        
         if(
             isset($data['file'])
             && $data['file'] instanceof UploadedFile
-        ){
-            $filepath = $data['file']->store('public/uploads');
-            $user->file = basename($filepath);
-            $user->save();
+        ){  
+            $filepath= $data['file']->store('uploads');
+            $user= basename($filepath);
+            
         }
 
         return User::create([

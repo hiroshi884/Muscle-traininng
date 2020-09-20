@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-
+use App\Models\User;
 use App\Models\Protain;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth ;
@@ -18,16 +18,17 @@ class ProtainController extends Controller
 
 public function create()
 {
-    return view('protains.create');
+
+    return view('protains.create',['users' => User::orderBy('id', 'desc')->paginate(),]);
 }
 public function store(Request $request)
 {
     $protain = new Protain;
     $protain->fill($request->all());
-    $protain->user()->associate(Auth::user()); // ★
+    $protain->user()->associate(Auth::user()); 
     $protain->save();
 
-    return redirect()->to('/protains'); // '/' へリダイレクト
+    return redirect()->to('/protains'); 
 }
 public function delete(Protain $protain)
 {

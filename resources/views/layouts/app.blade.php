@@ -50,11 +50,13 @@
                                 </li>
                             @endif
                         @else
+                        
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                   <img src=" {{ asset('storage/uploads' .$user->file)}}" class="rounded-circle" width="50" height="50">
+                                   <img src=" {{ asset('storage/' .Auth::user()->file)}}" class="rounded-circle" width="50" height="50">
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
+                        
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="{{route('index')}}">投稿を見る</a>
