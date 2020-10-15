@@ -6,6 +6,7 @@ use App\Models\User;
 use App\Http\Controllers\Controller;
 use App\Providers\PouteServiceProvider;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
@@ -69,12 +70,14 @@ class RegisterController extends Controller
     {
        
         $user = null;
+       
         
         if(
             isset($data['file'])
             && $data['file'] instanceof UploadedFile
         ){  
             $filepath= $data['file']->store('uploads');
+            var_dump($filepath);
             $user= basename($filepath);
             
         }

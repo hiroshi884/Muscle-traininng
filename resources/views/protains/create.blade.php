@@ -4,11 +4,22 @@
 
 @section('content')
 
-<div class="container">
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-2">
+        
+        @include('sidebar_links')
+    </div>
+
   <div class="row justify-content-center">
-    <div class="col-lg-8">
+    <div class="col-md-9">
+      
       <div class="card">
-        <div class="card-header">記録する</div>
+        <div class="card-header">
+          <img src=" {{ asset('storage/uploads/' .Auth::user()['file'])}}" class="rounded-circle" width="50" height="50">
+          記録する
+        </div>
+       
 
   <form method="post" action="{{route('protains.store')}}">
     @csrf
@@ -44,7 +55,7 @@
     </label>
 
    <label>回数：<input name="how_many" required type="number" placeholder="（例）5"></label>
-   <label>セット数：<input name="sets"required type="number" placeholder="（例）3"></label><br>
+   <label>セット数：<input name="sets"required type="number" placeholder="（例）3"></label>
     <label>日付け<input name="date"  required type="date" ></label>
    <div class="row justify-content-center" >メモ：<br>
    <textarea name="body" rows="4" cols="40" required placeholder="今日のトレーニングの感想を記入しよう。
@@ -57,5 +68,19 @@
     </div>
   </form>
  </div>
-@endsection
+ 
+
 </div><!--/#home -->
+<div style ="margin-top:50px">
+  <div>
+   @yield('index')
+  </div>
+</div>
+
+</div>
+</div>
+
+
+@endsection
+
+

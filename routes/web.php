@@ -23,8 +23,20 @@ Route::middleware('auth')->get('/users/{user}', 'UserController@show')->name('us
 Route::middleware('auth')->prefix('protains')->as('protains.')->group(function () {
     Route::get('create', 'ProtainController@create')->name('create');
     Route::post('store', 'ProtainController@store')->name('store');
+    Route::get('{protain}','ProtainController@show')->name('show');
+    Route::post('{protain}/reply', 'ProtainController@reply')->name('reply');
+    Route::get('{protain}/edit', 'ProtainController@edit')->name('edit');
+    Route::post('{protain}/update', 'ProtainController@update')->name('update');
     Route::post('{protain}/delete', 'ProtainController@delete')->name('delete');
+    Route::post('{reply}/delet', 'ProtainController@delet')->name('delet');
+    Route::get('{id}/like', 'ProtainController@like')->name('like');
+    Route::get('{id}/unlike', 'ProtainController@unlike')->name('unlike');
+    Route::get('profile', 'ProtainController@profile')->name('profile');
+    Route::post('profile_done', 'ProtainController@profile_done')->name('profile_done');
 });
+
+
+Route::get('{uer}/profile', 'ProtainController@profile')->name('profile');
 Route::middleware('auth')->post('{protain}/delete','UserController@delete')->name('delete');
 
 Route::get('user', 'UserController@show')->name('show');
@@ -37,4 +49,3 @@ Route::middleware('auth')->get('calendars','CalendarController@record')->name('c
 
 Route::middleware('auth')->get('firsts/first', 'FirstController@first')->name('first');
 
-Route::get('test', 'TestController@index')->name('test');
